@@ -18,26 +18,41 @@ interface VariableFont {
 // Polices variables avec leurs axes de variation disponibles
 const variableFonts: VariableFont[] = [
     // Polices avec 3+ axes variables (les plus sophistiquées)
-    { name: 'Roboto Flex', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: false, axes: { wdth: [25, 151], opsz: [8, 144], slnt: [-10, 0] } },
-    { name: 'Amstelvar', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: false, axes: { wdth: [35, 100], opsz: [10, 72], wght: [100, 900] } },
-    { name: 'Recursive', weights: [300, 400, 500, 600, 700, 800, 900], hasItalic: false, axes: { slnt: [-15, 0], CASL: [0, 1], MONO: [0, 1] } },
-    { name: 'Inter Tight', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { slnt: [-10, 0], opsz: [14, 32], wdth: [50, 200] } },
-    { name: 'Fraunces', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { opsz: [9, 144], SOFT: [0, 100], WONK: [0, 1] } },
-    { name: 'Commissioner', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: false, axes: { wdth: [75, 100], slnt: [-12, 0], FLAR: [0, 100] } },
-    { name: 'Anybody', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { wdth: [50, 150], slnt: [-20, 20], opsz: [8, 200] } },
-    { name: 'Orbitron', weights: [400, 500, 600, 700, 800, 900], hasItalic: false, axes: { wdth: [75, 100], wght: [400, 900], opsz: [12, 96] } },
-    { name: 'Climate Crisis', weights: [400], hasItalic: false, axes: { YEAR: [1979, 2050], wght: [300, 900], slnt: [-25, 25] } },
-    { name: 'Skolar Sans', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { wdth: [68, 200], opsz: [8, 200], slnt: [-15, 15] } },
+    { name: 'Roboto Flex', weights: [100, 1000], hasItalic: false, 
+        axes: {
+            wdth: [25, 151], slnt: [-10, 0],
+            GRAD: [-200, 150], XOPQ: [27, 175], YOPQ: [25, 135],
+            YTLC: [400, 570], YTAS: [650, 850], YTDE: [-305, -98],
+
+        }
+    },
+    { name: 'Recursive', weights: [300, 1000], hasItalic: false,
+        axes: {
+            slnt: [-15, 0], CASL: [0, 1], MONO: [0, 1]
+        }
+    },
+    { name: 'Inter Tight', weights: [100, 900], hasItalic: true, axes: { slnt: [-10, 0] } },
+    { name: 'Fraunces', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { SOFT: [0, 100] } },
+    { name: 'Commissioner', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: false,
+        axes: { wdth: [75, 100], slnt: [-12, 0], FLAR: [0, 100] }
+    },
+    { name: 'Anybody', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, 
+        axes: { wdth: [50, 150], slnt: [-20, 20] }
+    },
+    { name: 'Orbitron', weights: [400, 900], hasItalic: false, 
+        axes: {  }
+    },
+    { name: 'Climate Crisis', weights: [400], hasItalic: false, axes: { YEAR: [1979, 2050] } },
     
     // Polices avec 1-2 axes variables
-    { name: 'Bodoni Moda', weights: [400, 500, 600, 700, 800, 900], hasItalic: true, axes: { opsz: [6, 96] } },
-    { name: 'Inter', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: false, axes: { slnt: [-10, 0] } },
-    { name: 'Source Serif 4', weights: [200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { opsz: [8, 60] } },
-    { name: 'Playfair Display', weights: [400, 500, 600, 700, 800, 900], hasItalic: true, axes: { opsz: [5, 1200] } },
-    { name: 'Open Sans', weights: [300, 400, 500, 600, 700, 800], hasItalic: true, axes: { wdth: [75, 100] } },
-    { name: 'IBM Plex Sans', weights: [100, 200, 300, 400, 500, 600, 700], hasItalic: true, axes: { wdth: [85, 100] } },
-    { name: 'Archivo', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { wdth: [62, 125] } },
-    { name: 'DM Sans', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { opsz: [9, 40] } },
+    { name: 'Bodoni Moda', weights: [400, 900], hasItalic: true, axes: {  } },
+    { name: 'Inter', weights: [100, 900], hasItalic: false, axes: { slnt: [-10, 0] } },
+    { name: 'Source Serif 4', weights: [200, 900], hasItalic: true, axes: {  } },
+    { name: 'Playfair Display', weights: [400, 900], hasItalic: true, axes: {  } },
+    { name: 'Open Sans', weights: [300, 800], hasItalic: true, axes: { wdth: [75, 100] } },
+    { name: 'IBM Plex Sans', weights: [100, 700], hasItalic: true, axes: { wdth: [85, 100] } },
+    { name: 'Archivo', weights: [100, 900], hasItalic: true, axes: { wdth: [62, 125] } },
+    { name: 'DM Sans', weights: [100, 1000], hasItalic: true, axes: { } },
 ];
 
 interface MorphingState {
@@ -66,7 +81,6 @@ export default function AnimatedTitleVariableMorphing() {
     const animationFrameRef = useRef<number | null>(null);
     const lastTimeRef = useRef<number>(Date.now());
     
-    const [currentWeight, setCurrentWeight] = useState(700);
 
     // Configuration du morphing
     const morphTime = 2; // Durée du morphing en secondes
@@ -101,11 +115,13 @@ export default function AnimatedTitleVariableMorphing() {
         // Combiner toutes les clés des deux axes
         const allKeys = new Set([...Object.keys(axes1), ...Object.keys(axes2)]);
         
-        allKeys.forEach(key => {
-        const value1 = axes1[key] || 0;
-        const value2 = axes2[key] || 0;
-        result[key] = Math.round(value1 + (value2 - value1) * fraction);
-        });
+        allKeys.forEach(
+            key => {
+                const value1 = axes1[key] || 0;
+                const value2 = axes2[key] || 0;
+                result[key] = Math.round(value1 + (value2 - value1) * fraction);
+            }
+        );
         
         return result;
     };
@@ -209,47 +225,49 @@ export default function AnimatedTitleVariableMorphing() {
                 const dt = (newTime - lastTimeRef.current) / 1000;
                 lastTimeRef.current = newTime;
 
-                setMorphState(prev => {
-                    const newState = { ...prev };
-                    const shouldIncrementIndex = newState.cooldown > 0;
-                    
-                    newState.cooldown -= dt;
+                setMorphState(
+                    prev => {
+                        const newState = { ...prev };
+                        const shouldIncrementIndex = newState.cooldown > 0;
+                        
+                        newState.cooldown -= dt;
 
-                    if (newState.cooldown <= 0) {
-                        if (shouldIncrementIndex) {
-                            // Passer à la police suivante
-                            newState.currentIndex = newState.nextIndex;
-                            newState.nextIndex = (newState.nextIndex + 1) % variableFonts.length;
+                        if (newState.cooldown <= 0) {
+                            if (shouldIncrementIndex) {
+                                // Passer à la police suivante
+                                newState.currentIndex = newState.nextIndex;
+                                newState.nextIndex = (newState.nextIndex + 1) % variableFonts.length;
+                                
+                                // Mettre à jour les axes
+                                newState.currentAxes = newState.nextAxes;
+                                newState.nextAxes = generateRandomAxes(variableFonts[newState.nextIndex]);
+                            }
                             
-                            // Mettre à jour les axes
-                            newState.currentAxes = newState.nextAxes;
-                            newState.nextAxes = generateRandomAxes(variableFonts[newState.nextIndex]);
-                        }
-                        
-                        // Phase de morphing
-                        newState.morph -= newState.cooldown;
-                        newState.cooldown = 0;
-                        newState.isInCooldown = false;
-                        
-                        let fraction = newState.morph / morphTime;
-                        
-                        if (fraction > 1) {
-                            newState.cooldown = cooldownTime;
-                            fraction = 1;
+                            // Phase de morphing
+                            newState.morph -= newState.cooldown;
+                            newState.cooldown = 0;
+                            newState.isInCooldown = false;
+                            
+                            let fraction = newState.morph / morphTime;
+                            
+                            if (fraction > 1) {
+                                newState.cooldown = cooldownTime;
+                                fraction = 1;
+                                newState.isInCooldown = true;
+                            }
+                            
+                            // Appliquer les effets de blur et morphing
+                            applyMorphEffect(fraction, newState);
+                        } else {
+                            // Phase de cooldown
+                            newState.morph = 0;
                             newState.isInCooldown = true;
+                            applyCooldownEffect(newState);
                         }
-                        
-                        // Appliquer les effets de blur et morphing
-                        applyMorphEffect(fraction, newState);
-                    } else {
-                        // Phase de cooldown
-                        newState.morph = 0;
-                        newState.isInCooldown = true;
-                        applyCooldownEffect(newState);
-                    }
 
-                    return newState;
-                });
+                        return newState;
+                    }
+                );
 
                 animationFrameRef.current = requestAnimationFrame(animate);
             };
