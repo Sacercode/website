@@ -1,24 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sacercode - Site Web d'Entreprise
 
-## Getting Started
+Site web de Sacercode, une entreprise de conseil et formation en informatique.
 
-First, run the development server:
+## À propos
+
+Sacercode est spécialisée dans le conseil et la formation informatique. Ce site web est actuellement en construction.
+
+## Technologies utilisées
+
+- **Next.js 15** - Framework React pour le développement web
+- **TypeScript** - Pour un code plus robuste et maintenable
+- **TailwindCSS** - Framework CSS utilitaire pour le design
+- **App Router** - Nouveau système de routage de Next.js
+
+## Développement
+
+Pour lancer le serveur de développement :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site sera accessible sur [http://localhost:3000](http://localhost:3000) (ou un autre port disponible).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure du projet
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/
+    layout.tsx    # Layout principal de l'application
+    page.tsx      # Page d'accueil avec hero section
+    globals.css   # Styles globaux
+```
+
+## Fonctionnalités actuelles
+
+- ✅ Hero section avec le nom de l'entreprise "Sacercode"
+- ✅ Message "Site web en construction"
+- ✅ Champ email désactivé pour future newsletter
+- ✅ Design responsive (mobile et desktop)
+- ✅ Support du mode sombre/clair
+- ✅ Interface professionnelle et moderne
+
+## Prochaines étapes
+
+- Ajouter des pages de contenu (services, à propos, contact)
+- Intégrer un système de newsletter
+- Ajouter des animations et interactions
+- Optimiser le SEO
 
 ## Learn More
 
