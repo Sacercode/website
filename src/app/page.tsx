@@ -1,6 +1,3 @@
-import AnimatedTitleMorphing from "@/components/AnimatedTitleMorphing";
-import AnimatedTitleVariable from "@/components/AnimatedTitleVariable";
-import AnimatedTitle from "./components/AnimatedTitle";
 import AnimatedTitleVariableMorphing from "@/components/AnimatedTitleVariableMorphing";
 
 export default function Home() {
@@ -8,13 +5,6 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center px-4">
       <div className="w-full max-w-10xl mx-auto text-center space-y-10">
         {/* Hero Title */}
-        <h2>AnimatedTitleMorphing</h2>
-        <AnimatedTitleMorphing/>
-        <h2>AnimatedTitle</h2>
-        <AnimatedTitle/>
-        <h2>AnimatedTitleVariable</h2>
-        <AnimatedTitleVariable/>
-        <h2>AnimatedTitleVariableMorphing</h2>
         <AnimatedTitleVariableMorphing/>
         
         {/* Subtitle */}

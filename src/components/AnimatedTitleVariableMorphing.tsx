@@ -18,20 +18,19 @@ interface VariableFont {
 // Polices variables avec leurs axes de variation disponibles
 const variableFonts: VariableFont[] = [
     // Polices avec 3+ axes variables (les plus sophistiquées)
-    { name: 'Roboto Flex', weights: [100, 1000], hasItalic: false, 
-        axes: {
-            wdth: [25, 151], slnt: [-10, 0],
-            GRAD: [-200, 150], XOPQ: [27, 175], YOPQ: [25, 135],
-            YTLC: [400, 570], YTAS: [650, 850], YTDE: [-305, -98],
-
-        }
-    },
     { name: 'Recursive', weights: [300, 1000], hasItalic: false,
         axes: {
             slnt: [-15, 0], CASL: [0, 1], MONO: [0, 1]
         }
     },
-    { name: 'Inter Tight', weights: [100, 900], hasItalic: true, axes: { slnt: [-10, 0] } },
+    { name: 'Roboto Flex', weights: [100, 1000], hasItalic: false, 
+        axes: {
+            wdth: [25, 151], slnt: [-10, 0],
+            GRAD: [-200, 150], XOPQ: [27, 175], YOPQ: [25, 135],
+            YTLC: [400, 570], YTAS: [650, 850], YTDE: [-305, -98],
+        }
+    },
+    { name: 'Inter Tight', weights: [100, 900], hasItalic: true, axes: { } },
     { name: 'Fraunces', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { SOFT: [0, 100] } },
     { name: 'Commissioner', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: false,
         axes: { wdth: [75, 100], slnt: [-12, 0], FLAR: [0, 100] }
@@ -42,16 +41,17 @@ const variableFonts: VariableFont[] = [
     { name: 'Orbitron', weights: [400, 900], hasItalic: false, 
         axes: {  }
     },
-    { name: 'Climate Crisis', weights: [400], hasItalic: false, axes: { YEAR: [1979, 2050] } },
     
     // Polices avec 1-2 axes variables
     { name: 'Bodoni Moda', weights: [400, 900], hasItalic: true, axes: {  } },
-    { name: 'Inter', weights: [100, 900], hasItalic: false, axes: { slnt: [-10, 0] } },
+    { name: 'Caveat', weights: [400, 700], hasItalic: false, axes: { } },
     { name: 'Source Serif 4', weights: [200, 900], hasItalic: true, axes: {  } },
-    { name: 'Playfair Display', weights: [400, 900], hasItalic: true, axes: {  } },
     { name: 'Open Sans', weights: [300, 800], hasItalic: true, axes: { wdth: [75, 100] } },
+    { name: 'Playfair Display', weights: [400, 900], hasItalic: true, axes: {  } },
+    { name: 'Gluten', weights: [100, 900], hasItalic: false, axes: { slnt: [-13, 13] } },
     { name: 'IBM Plex Sans', weights: [100, 700], hasItalic: true, axes: { wdth: [85, 100] } },
     { name: 'Archivo', weights: [100, 900], hasItalic: true, axes: { wdth: [62, 125] } },
+    { name: 'Climate Crisis', weights: [400, 400], hasItalic: false, axes: { YEAR: [1979, 2050] } },
     { name: 'DM Sans', weights: [100, 1000], hasItalic: true, axes: { } },
 ];
 
@@ -67,6 +67,7 @@ interface MorphingState {
 
 export default function AnimatedTitleVariableMorphing() {
     const [isLoaded, setIsLoaded] = useState(false);
+    const [currentWeight, setCurrentWeight] = useState(700);
     const [morphState, setMorphState] = useState<MorphingState>({
         currentIndex: 0,
         nextIndex: 1,
@@ -76,6 +77,9 @@ export default function AnimatedTitleVariableMorphing() {
         currentAxes: {},
         nextAxes: {}
     });
+    const currentFont = variableFonts[morphState.currentIndex];
+    const nextFont = variableFonts[morphState.nextIndex];
+
     const text1Ref = useRef<HTMLSpanElement>(null);
     const text2Ref = useRef<HTMLSpanElement>(null);
     const animationFrameRef = useRef<number | null>(null);
@@ -84,7 +88,7 @@ export default function AnimatedTitleVariableMorphing() {
 
     // Configuration du morphing
     const morphTime = 2; // Durée du morphing en secondes
-    const cooldownTime = 1.5; // Pause entre les transitions
+    const cooldownTime = 5; // Pause entre les transitions
 
     // Fonction pour générer des valeurs aléatoires pour les axes variables
     const generateRandomAxes = (font: VariableFont): {[key: string]: number} => {
@@ -179,10 +183,42 @@ export default function AnimatedTitleVariableMorphing() {
                                 const fontName = font.name.replace(/\s+/g, '+');
                                 const weightRange = `${Math.min(...font.weights)}..${Math.max(...font.weights)}`;
                                 
-                                if (font.hasItalic) {
-                                    link.href = `https://fonts.googleapis.com/css2?family=${fontName}:ital,wght@0,${weightRange};1,${weightRange}&display=swap`;
-                                } else {
-                                    link.href = `https://fonts.googleapis.com/css2?family=${fontName}:wght@${weightRange}&display=swap`;
+                                if (fontName === 'Climate+Crisis') {
+                                    link.href = `https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979..2050&display=swap`;
+                                }
+                                else if (fontName === "Roboto+Flex") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&display=swap";
+                                }
+                                else if (fontName === "Inter+Tight") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap";
+                                }
+                                else if (fontName === "Commissioner") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=Commissioner:slnt,wght,FLAR,VOLM@-12..0,100..900,0..100,0..100&display=swap";
+                                }
+                                else if (fontName === "Anybody") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,50..150,100..900;1,50..150,100..900&display=swap";
+                                }
+                                else if (fontName === "Fraunces") {
+                                    link.href = `https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap`;
+                                }
+                                else if (fontName === "Open+Sans") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap";
+                                }
+                                else if (fontName === "Gluten") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=Gluten:slnt,wght@-13..13,100..900&display=swap";
+                                } else if (fontName === "Open+Sans") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap";
+                                } else if (fontName === "IBM+Plex+Sans") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wdth,wght@0,75..100,100..700;1,75..100,100..700&display=swap";
+                                } else if (fontName === "Archivo") {
+                                    link.href = "https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap";
+                                }
+                                if (!link.href) {
+                                    if (font.hasItalic) {
+                                        link.href = `https://fonts.googleapis.com/css2?family=${fontName}:ital,wght@0,${weightRange};1,${weightRange}&display=swap`;
+                                    } else {
+                                        link.href = `https://fonts.googleapis.com/css2?family=${fontName}:wght@${weightRange}&display=swap`;
+                                    }
                                 }
                                 
                                 link.rel = 'stylesheet';
@@ -224,6 +260,7 @@ export default function AnimatedTitleVariableMorphing() {
                 const newTime = Date.now();
                 const dt = (newTime - lastTimeRef.current) / 1000;
                 lastTimeRef.current = newTime;
+
 
                 setMorphState(
                     prev => {
@@ -272,19 +309,38 @@ export default function AnimatedTitleVariableMorphing() {
                 animationFrameRef.current = requestAnimationFrame(animate);
             };
 
+            const interval = setInterval(
+                () => {
+                    setMorphState(
+                        prev => {
+                            const stateFont = variableFonts[prev.nextIndex];
+                            const newState = { ...prev };
+                            const minWeight = stateFont.weights[0];
+                            const maxWeight = stateFont.weights[1];
+
+                            const randomWeight = Math.floor(minWeight + Math.random() * (maxWeight - minWeight));
+                            setCurrentWeight(randomWeight);
+
+                            newState.nextAxes = generateRandomAxes(stateFont);
+                            return newState;
+                        }
+                    );
+
+                }, 1000
+            );
+
+
             animationFrameRef.current = requestAnimationFrame(animate);
 
             return () => {
+                clearInterval(interval);
                 if (animationFrameRef.current) {
                     cancelAnimationFrame(animationFrameRef.current);
                 }
             };
         }, [isLoaded]
     );
-
-
-    const currentFont = variableFonts[morphState.currentIndex];
-    const nextFont = variableFonts[morphState.nextIndex];
+    console.log("morphState", morphState.nextAxes);
 
     return (
         <div className="relative flex flex-col items-center">
@@ -308,7 +364,10 @@ export default function AnimatedTitleVariableMorphing() {
                         width: '100%',
                         textAlign: 'center',
                         opacity: morphState.isInCooldown ? '0%' : undefined,
-                        fontVariationSettings: createFontVariationSettings(morphState.currentAxes)
+                        fontVariationSettings: createFontVariationSettings(morphState.nextAxes),
+                        fontWeight: currentWeight,
+                        transition: "font-variation-settings 0.25s ease-in-out, font-weight 0.25s ease-in-out",
+                        fontStyle: "normal",
                     }}
                 >
                     Sacercode
@@ -323,7 +382,10 @@ export default function AnimatedTitleVariableMorphing() {
                         width: '100%',
                         textAlign: 'center',
                         opacity: morphState.isInCooldown ? '100%' : undefined,
-                        fontVariationSettings: createFontVariationSettings(morphState.nextAxes)
+                        fontVariationSettings: createFontVariationSettings(morphState.nextAxes),
+                        fontWeight: currentWeight,
+                        transition: "font-variation-settings 0.25s ease-in-out, font-weight 0.25s ease-in-out",
+                        fontStyle: "normal",
                     }}
                 >
                     Sacercode
@@ -335,12 +397,12 @@ export default function AnimatedTitleVariableMorphing() {
                 <defs>
                 <filter id="threshold">
                     <feColorMatrix
-                    in="SourceGraphic"
-                    type="matrix"
-                    values="1 0 0 0 0
-                            0 1 0 0 0
-                            0 0 1 0 0
-                            0 0 0 255 -140"
+                        in="SourceGraphic"
+                        type="matrix"
+                        values="1 0 0 0 0
+                                0 1 0 0 0
+                                0 0 1 0 0
+                                0 0 0 255 -140"
                     />
                 </filter>
                 </defs>
@@ -348,7 +410,7 @@ export default function AnimatedTitleVariableMorphing() {
 
             {/* Indicateur de police et axes */}
             {isLoaded && (
-                <div className="text-center">
+                <div className="text-center mb-4">
                     <p className="text-xs text-gray-400 dark:text-gray-500 font-mono">
                         {morphState.isInCooldown ? nextFont.name : `${currentFont.name} → ${nextFont.name}`}
                         <br />
@@ -356,17 +418,6 @@ export default function AnimatedTitleVariableMorphing() {
                         ({morphState.nextIndex + 1}/{variableFonts.length})
                         </span>
                     </p>
-                    
-                    {/* Affichage des axes variables actuels */}
-                    {Object.keys(morphState.nextAxes).length > 0 && (
-                        <div className="mt-1 text-xs text-gray-500 dark:text-gray-400 font-mono">
-                        {Object.entries(morphState.nextAxes).map(([axis, value]) => (
-                            <span key={axis} className="inline-block mx-1">
-                            {axis}: {value}
-                            </span>
-                        ))}
-                        </div>
-                    )}
                 </div>
             )}
 
@@ -380,8 +431,19 @@ export default function AnimatedTitleVariableMorphing() {
             )}
 
             {/* Barres de progression des axes variables */}
-            {isLoaded && Object.keys(morphState.nextAxes).length > 0 && (
+            {isLoaded && (
                 <div className="flex gap-2">
+                    <div className="flex flex-col items-center">
+                        <div className="w-16 h-1 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
+                            <div 
+                                className={`h-full bg-gradient-to-r from-slate-200 to-slate-300 transition-all duration-300`}
+                                style={{ width: `${((currentWeight - currentFont.weights[0]) / (currentFont.weights[1] - currentFont.weights[0]) * 100)}%` }}
+                            />
+                        </div>
+                        <span className="text-xs text-gray-400 dark:text-gray-500 font-mono mt-1">
+                            Weight : {currentWeight}
+                        </span>
+                    </div>
                     {Object.entries(morphState.nextAxes).map(
                         ([axis, value], index) => {
                             const axisRange = nextFont.axes[axis];
@@ -402,17 +464,17 @@ export default function AnimatedTitleVariableMorphing() {
                             const colorClass = colors[index % colors.length];
                             
                             return (
-                            <div key={axis} className="flex flex-col items-center">
-                                <div className="w-16 h-1 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
-                                <div 
-                                    className={`h-full bg-gradient-to-r ${colorClass} transition-all duration-300`}
-                                    style={{ width: `${progress}%` }}
-                                />
+                                <div key={axis} className="flex flex-col items-center">
+                                    <div className="w-16 h-1 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
+                                        <div 
+                                            className={`h-full bg-gradient-to-r ${colorClass} transition-all duration-300`}
+                                            style={{ width: `${progress}%` }}
+                                        />
+                                    </div>
+                                    <span className="text-xs text-gray-400 dark:text-gray-500 font-mono mt-1">
+                                        {axis}: {value}
+                                    </span>
                                 </div>
-                                <span className="text-xs text-gray-400 dark:text-gray-500 font-mono mt-1">
-                                {axis}
-                                </span>
-                            </div>
                             );
                         }
                     )}
