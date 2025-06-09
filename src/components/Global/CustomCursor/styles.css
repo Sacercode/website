@@ -1,0 +1,19 @@
+
+/* Curseur personnalisé */
+.custom-cursor {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* Animation au survol des éléments interactifs */
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(.5);
+}

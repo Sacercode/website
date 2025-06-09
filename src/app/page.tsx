@@ -1,35 +1,37 @@
-import AnimatedTitleVariableMorphing from "@/components/AnimatedTitleVariableMorphing";
+import Hero from "@/components/PageSpecific/Home/Sections/Hero";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center px-4">
-      <div className="w-full max-w-10xl mx-auto text-center space-y-10">
-        {/* Hero Title */}
-        <AnimatedTitleVariableMorphing/>
-        
-        {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-medium">
-          Site web en construction
-        </p>
-        
-        {/* Email Input Section */}
-        <div className="mt-12 max-w-md mx-auto">
-          <div className="flex flex-col space-y-4">
-            <input
-              type="email"
-              placeholder="Votre adresse e-mail"
-              disabled
-              className="w-full px-4 py-3 text-base border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 cursor-not-allowed focus:outline-none"
-            />
-            <button
-              disabled
-              className="w-full px-6 py-3 text-base font-medium text-white bg-gray-400 dark:bg-gray-600 rounded-lg cursor-not-allowed"
-            >
-              Inscription à la newsletter bientôt disponible
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <Hero/>
+       <section className="flex flex-col items-center text-center mt-10">
+        <main className="max-w-2xl">
+          <h2>Réalisations client</h2>
+          <h3>Disco Star</h3>
+          <p>Nous avons réalisé le site internet de ce tout premier jeu mobile inspiré par l&apos;iconique groupe Village People !</p>
+          <a href="https://discostar.game" target="_blank" rel="noopener noreferrer">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded">Visiter le site</button>
+          </a>
+        </main>
+      </section>
+      <section className="flex flex-col items-center text-center mt-10">
+        <main className="max-w-2xl">
+          <h2>EditIDE</h2>
+          <p>Ce logiciel SaaS en cours de développement permettra de créer des sites webs de manière simplifiée.</p>
+          <a href="https://editide.fr" target="_blank" rel="noopener noreferrer">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded">Accéder au logiciel</button>
+          </a>
+        </main>
+      </section>
+      <section className="flex flex-col items-center text-center mt-10">
+        <main className="max-w-2xl">
+          <h2>A propos du fondateur</h2>
+          <p>Dorian Blanchard est un ingénieur informatique spécialisé dans le développement web, avec une expertise dans la création de sites web adaptés à toutes tailles d&apos;écrans.</p>
+          <a href="https://blanchardorian.fr" target="_blank" rel="noopener noreferrer">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded">Voir son portfolio</button>
+          </a>
+        </main>
+      </section>
+    </>
   );
 }

@@ -31,11 +31,11 @@ const variableFonts: VariableFont[] = [
         }
     },
     { name: 'Inter Tight', weights: [100, 900], hasItalic: true, axes: { } },
-    { name: 'Fraunces', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, axes: { SOFT: [0, 100] } },
-    { name: 'Commissioner', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: false,
+    { name: 'Fraunces', weights: [100, 900], hasItalic: true, axes: { SOFT: [0, 100] } },
+    { name: 'Commissioner', weights: [100, 900], hasItalic: false,
         axes: { wdth: [75, 100], slnt: [-12, 0], FLAR: [0, 100] }
     },
-    { name: 'Anybody', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], hasItalic: true, 
+    { name: 'Anybody', weights: [100, 900], hasItalic: true, 
         axes: { wdth: [50, 150], slnt: [-20, 20] }
     },
     { name: 'Orbitron', weights: [400, 900], hasItalic: false, 
