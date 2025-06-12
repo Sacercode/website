@@ -14,10 +14,10 @@ export default function MentionsLegales() {
             Mentions légales
           </h1>
 
-          {/* Informations sur l'éditeur */}
+          {/* Informations sur l&apos;éditeur */}
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">
-              Informations sur l'éditeur
+              Informations sur l&apos;éditeur
             </h2>
             <div className="space-y-2 text-gray-700">
               <p><span className="font-medium">Dénomination sociale :</span> SAS Sacercode</p>
@@ -52,11 +52,11 @@ export default function MentionsLegales() {
             </h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle.
+                L&apos;ensemble de ce site relève de la législation française et internationale sur le droit d&apos;auteur et la propriété intellectuelle.
                 Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
               </p>
               <p>
-                La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
+                La reproduction de tout ou partie de ce site sur un support électronique quel qu&apos;il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
               </p>
             </div>
           </section>
@@ -69,10 +69,10 @@ export default function MentionsLegales() {
             <div className="space-y-4 text-gray-700">
               <p>
                 Conformément à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD),
-                vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité des données vous concernant.
+                vous disposez d&apos;un droit d&apos;accès, de rectification, de suppression et de portabilité des données vous concernant.
               </p>
               <p>
-                Pour exercer ces droits, vous pouvez nous contacter à l'adresse : <span className="font-medium"><a href="mailto:contact@sacercode.fr" className="text-blue-600 hover:text-blue-800">contact@sacercode.fr</a></span>
+                Pour exercer ces droits, vous pouvez nous contacter à l&apos;adresse : <span className="font-medium"><a href="mailto:contact@sacercode.fr" className="text-blue-600 hover:text-blue-800">contact@sacercode.fr</a></span>
               </p>
               <p>
                 <span className="font-medium">Responsable du traitement :</span> SAS Sacercode
@@ -90,12 +90,12 @@ export default function MentionsLegales() {
             </h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                Ce site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic.
+                Ce site utilise des cookies pour améliorer l&apos;expérience utilisateur et analyser le trafic.
                 Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez notre site.
               </p>
               <p>
                 Vous pouvez gérer vos préférences de cookies dans les paramètres de votre navigateur.
-                Le refus d'installation d'un cookie peut entraîner l'impossibilité d'accéder à certains services.
+                Le refus d&apos;installation d&apos;un cookie peut entraîner l&apos;impossibilité d&apos;accéder à certains services.
               </p>
             </div>
           </section>
@@ -111,8 +111,8 @@ export default function MentionsLegales() {
                 mais peut toutefois contenir des inexactitudes, des omissions ou des lacunes.
               </p>
               <p>
-                SAS Sacercode ne pourra en aucun cas être tenue responsable de tout dommage de quelque nature qu'il soit résultant
-                de l'interprétation ou de l'utilisation des informations et/ou documents disponibles sur ce site.
+                SAS Sacercode ne pourra en aucun cas être tenue responsable de tout dommage de quelque nature qu&apos;il soit résultant
+                de l&apos;interprétation ou de l&apos;utilisation des informations et/ou documents disponibles sur ce site.
               </p>
             </div>
           </section>

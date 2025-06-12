@@ -340,10 +340,9 @@ export default function AnimatedTitleVariableMorphing() {
             };
         }, [isLoaded]
     );
-    console.log("morphState", morphState.nextAxes);
 
     return (
-        <div className="relative flex flex-col items-center">
+        <div className="w-full relative flex flex-col items-center">
             {/* Container avec le filtre SVG */}
             <div 
                 className="relative w-full"

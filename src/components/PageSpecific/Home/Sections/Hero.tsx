@@ -4,13 +4,16 @@ import AnimatedTitleVariableMorphing from "@/components/AnimatedTitleVariableMor
 export default function Hero() {
     return (
         <section className="min-h-screen bg-white dark:bg-black flex items-center justify-center px-4">
-          <div className="w-full max-w-10xl mx-auto text-center space-y-10">
+          <div className="flex flex-col items-center w-full max-w-10xl mx-auto text-center space-y-10">
             {/* Hero Title */}
             <AnimatedTitleVariableMorphing/>
             
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-medium">
-              Site web en construction
+              Coder est notre sacerdoce.
+            </p>
+            <p className="text-sm md:text-md text-gray-600 dark:text-gray-400 font-medium max-w-md">
+              Sacerdoce (nom masculin), sens figuré : Fonction qui présente un caractère quasi religieux en raison du dévouement qu&apos;elle exige.
             </p>
             
             {/* Email Input Section */}
