@@ -3,21 +3,21 @@ import AnimatedTitleVariableMorphing from "@/components/AnimatedTitleVariableMor
 
 export default function Hero() {
     return (
-        <section className="min-h-screen bg-white dark:bg-black flex items-center justify-center px-4">
+        <section className="flex items-center justify-center h-full px-4">
           <div className="flex flex-col items-center w-full max-w-10xl mx-auto text-center space-y-10">
             {/* Hero Title */}
             <AnimatedTitleVariableMorphing/>
             
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-medium">
-              Coder est notre sacerdoce.
+              Parce que coder est un sacerdoce.
             </p>
             <p className="text-sm md:text-md text-gray-600 dark:text-gray-400 font-medium max-w-md">
               Sacerdoce (nom masculin), sens figuré : Fonction qui présente un caractère quasi religieux en raison du dévouement qu&apos;elle exige.
             </p>
             
             {/* Email Input Section */}
-            <div className="mt-12 max-w-md mx-auto">
+            {/* <div className="mt-12 max-w-md mx-auto">
               <div className="flex flex-col space-y-4">
                 <input
                   type="email"
@@ -32,7 +32,7 @@ export default function Hero() {
                   Inscription à la newsletter bientôt disponible
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
     );

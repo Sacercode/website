@@ -30,10 +30,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
-        <CustomCursor />
-        {children}
-        <Footer/>
+        <div className="flex flex-col justify-between pt-24">
+          <Header/>
+          <CustomCursor />
+          <main className="min-h-screen bg-white dark:bg-black grow flex flex-col items-center justify-center px-6">
+            {children}
+          </main>
+          <Footer/>
+        </div>
       </body>
     </html>
   );

@@ -431,7 +431,7 @@ export default function AnimatedTitleVariableMorphing() {
 
             {/* Barres de progression des axes variables */}
             {isLoaded && (
-                <div className="flex gap-2">
+                <div className="flex flex-wrap justify-center gap-2 px-4">
                     <div className="flex flex-col items-center">
                         <div className="w-16 h-1 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
                             <div 

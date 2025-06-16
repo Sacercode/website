@@ -1,17 +1,32 @@
 import Link from "next/link";
+import Image from "next/image";
+import "./styles.css";
 
 export default function Header() {
   return (
-    <header className="bg-white dark:bg-black">
-      <div className="max-w-10xl mx-auto px-4 py-6 flex items-center space-x-8">
-        <Link href="/realisations" className="text-lg font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          Realisations
+    <header className="header bg-white dark:bg-black">
+      <div className="max-w-10xl mx-auto flex items-center space-x-8">
+        <Link href="/" className="flex gap-6 items-center link">
+          <Image
+            src="/images/logo-sacercode.png"
+            alt="Logo de Sacercode"
+            width={50}
+            height={50}
+            className="rounded-lg"
+          />
+          Accueil
         </Link>
-        <Link href="/fondateur" className="text-lg font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          Fondateur
+        <Link href="/services" className="link">
+          Services
         </Link>
-        <Link href="/cube-3d" className="text-lg font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          Cube 3D
+        <Link href="/realisations" className="link">
+          Réalisations
+        </Link>
+        <Link href="/logiciels" className="link">
+          Logiciels
+        </Link>
+        <Link href="/equipe" className="link">
+          L&apos;équipe
         </Link>
       </div>
     </header>

@@ -11,7 +11,7 @@ export default function Cube() {
     return (        
         <Canvas
             shadows
-            camera={{ position: [0, 0, 3], fov: 20 }}
+            camera={{ position: [0, 0, 6], fov: 20 }}
             gl={{ antialias: true, alpha: true }}
             onPointerOver={() => setHovered(true)}
             onPointerOut={() => setHovered(false)}

@@ -1,19 +1,58 @@
+@import "tailwindcss";
+
 
 /* Curseur personnalisé */
 .custom-cursor {
-  position: fixed;
+  @apply fixed z-40;
+
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: white;
+  background: var(--background);
   mix-blend-mode: difference;
   pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
+  transform-origin: left top;
+  transform: scale(0.2) translate(-50%, -50%);
+  transition: transform 0.2s ease-out;
+
+  &.moving {
+    transform: scale(1) translate(-50%, -50%);
+  }
+
+  &.hover {
+    transform: scale(0) translate(-50%, -50%);
+  }
 }
 
-/* Animation au survol des éléments interactifs */
-.custom-cursor.hover {
-  transform: translate(-50%, -50%) scale(.5);
+.cursor-inner {
+  @apply fixed z-50;
+  pointer-events: none;
+  background: var(--background);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform-origin: left top;
+  transform: scale(0) translateX(-50%) translateY(-50%);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  
+  &.moving{
+    transform: scale(1) translateX(-50%) translateY(-50%);
+  }
+
+  &.hover {
+    animation: cursor-pulse 1s infinite;
+  }
+}
+
+@keyframes cursor-pulse {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  50% {
+    transform: scale(1.5) translate(-50%, -50%);
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
 }
