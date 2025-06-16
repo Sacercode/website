@@ -34,7 +34,7 @@ export default function Equipe() {
                     </p>
                 </article>
                 <Image
-                    src="/images/dorian-blanchard.png"
+                    src="./images/dorian-blanchard.png"
                     alt="Dorian Blanchard, fondateur de Sacercode"
                     width={300}
                     height={300}

@@ -8,7 +8,7 @@ export default function Header() {
       <div className="max-w-10xl mx-auto flex items-center space-x-8">
         <Link href="/" className="flex gap-6 items-center link">
           <Image
-            src="/images/logo-sacercode.png"
+            src="./images/logo-sacercode.png"
             alt="Logo de Sacercode"
             width={50}
             height={50}
