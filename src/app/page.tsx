@@ -1,5 +1,4 @@
 
-import Cube from "@/components/3D/Cube";
 import Hero from "@/components/PageSpecific/Home/Sections/Hero";
 
 export default function Home() {

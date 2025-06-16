@@ -23,6 +23,20 @@ npm run dev
 
 Le site sera accessible sur [http://localhost:3000](http://localhost:3000) (ou un autre port disponible).
 
+## Déploiement GitHub Pages
+
+### Configuration automatique
+Ce projet est configuré pour être déployé automatiquement sur GitHub Pages via GitHub Actions.
+
+### Configuration GitHub Pages
+1. Poussez votre code vers GitHub
+2. Allez dans Settings > Pages de votre repository
+3. Sélectionnez "Deploy from a branch"
+4. Choisissez la branche `main` et le dossier `/ (root)` si vous utilisez GitHub Actions
+5. Ou choisissez le dossier `docs` si vous préférez le build manuel
+
+Le site sera accessible à l'adresse : `https://[votre-username].github.io/sacercode/`
+
 ## Structure du projet
 
 ```
@@ -41,6 +55,7 @@ src/
 - ✅ Design responsive (mobile et desktop)
 - ✅ Support du mode sombre/clair
 - ✅ Interface professionnelle et moderne
+- ✅ Configuration GitHub Pages
 
 ## Prochaines étapes
 
