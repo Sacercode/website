@@ -1,0 +1,16 @@
+
+/* 3D Carousel Styles */
+.perspective-1000 {
+  perspective: 1000px;
+  perspective-origin: center center;
+}
+
+@layer utilities {
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}

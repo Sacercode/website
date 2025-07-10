@@ -1,0 +1,9 @@
+@reference "tailwindcss";;
+
+.service-icon {
+    @apply float-right h-auto 
+        min-w-20 w-20 m-2
+        sm:min-w-30 sm:w-30 sm:m-12
+        md:min-w-50 md:w-50
+    ;
+}

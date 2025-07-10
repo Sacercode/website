@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "L'équipe - Sacercode",
@@ -31,10 +32,16 @@ export default function Equipe() {
                         <a href="https://blanchardorian.fr" target="_blank" rel="noopener noreferrer">
                             consulter mon portfolio personnel
                         </a>.
+                        <br/>Ou alors...
+                        <Link className="block mt-6" href="/contact">
+                            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                Contactez-moi !
+                            </button>
+                        </Link>
                     </p>
                 </article>
                 <Image
-                    src="./images/dorian-blanchard.png"
+                    src="/images/dorian-blanchard.png"
                     alt="Dorian Blanchard, fondateur de Sacercode"
                     width={300}
                     height={300}

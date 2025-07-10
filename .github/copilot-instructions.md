@@ -8,6 +8,8 @@ This is a NextJS project with TypeScript and TailwindCSS for Sacercode, a consul
 
 - Use TypeScript for all components and utilities
 - Follow TailwindCSS conventions for styling
+- Don't change font color or size
+- Create custom classes and use @apply if needed.
 - Implement responsive design principles
 - Use NextJS App Router patterns
 - Keep components clean and well-documented

@@ -1,4 +1,5 @@
 'use client';
+import { usePathname } from "next/navigation";
 import "./styles.css"
 
 import { useEffect, useState, useRef } from 'react';
@@ -9,6 +10,8 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [isMoving, setIsMoving] = useState(false);
   const mousePositionRef = useRef({ x: 0, y: 0 });
+  
+  const currentPath = usePathname();
   
   useEffect(
     () => {
@@ -61,7 +64,9 @@ export default function CustomCursor() {
       interactiveElements.forEach(element => {
         element.addEventListener('mouseenter', handleMouseEnter);
         element.addEventListener('mouseleave', handleMouseLeave);
-      });      return () => {
+      });
+      
+      return () => {
         clearTimeout(moveTimer);
         cancelAnimationFrame(animationId);
         document.removeEventListener('mousemove', updateMousePosition);
@@ -70,7 +75,7 @@ export default function CustomCursor() {
           element.removeEventListener('mouseleave', handleMouseLeave);
         });
       };
-    }, []
+    }, [currentPath]
   );
   
   return (

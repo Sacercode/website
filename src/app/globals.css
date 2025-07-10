@@ -21,17 +21,23 @@
   }
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
+  @apply min-h-screen flex flex-col justify-between;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  cursor: none; /* Cache le curseur par défaut */
+  cursor: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   font-weight: bold;
   color: var(--foreground);
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -65,5 +71,13 @@ p {
 }
 
 a {
-  @apply text-blue-300 hover:underline;
+  @apply text-blue-300 hover:underline cursor-pointer;
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+.content-holder {
+  @apply bg-white dark:bg-black grow flex flex-col items-center justify-center px-6 py-12;
 }

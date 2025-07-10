@@ -1,5 +1,5 @@
-@import "tailwindcss";
+@reference "tailwindcss";;
 
 .footer {
-    @apply dark:bg-gray-900 bg-gray-200 text-black dark:text-white py-6;
+    @apply dark:bg-gray-900 bg-gray-200 text-black dark:text-white p-6;
 }

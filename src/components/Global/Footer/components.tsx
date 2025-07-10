@@ -5,13 +5,10 @@ export default function Footer() {
         <footer className="footer">
             <div className="container mx-auto text-center">
                 <p className="text-sm">
-                    © {new Date().getFullYear()} Sacercode. Tous droits réservés.
+                    © {new Date().getFullYear()} Sacercode. Tous droits réservés. - <a href="/mentions-legales">Mentions légales</a>
                 </p>
                 <p className="text-xs mt-2">
-                    Le code source de ce site est disponible sur
-                    <a href="https://github.com/Sacercode/website" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">
-                        GitHub
-                    </a> - <a href="/mentions-legales">Mentions légales</a>
+                    Ce site web n&apos;utilise pas de cookies et ne collecte aucune donnée personnelle.
                 </p>
             </div>
         </footer>

@@ -1,0 +1,9 @@
+@reference "tailwindcss";;
+
+.icon-text {
+    @apply flex items-center gap-4 my-4;
+
+    svg {
+        @apply w-8 h-auto;
+    }
+}

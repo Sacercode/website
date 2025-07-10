@@ -1,19 +1,20 @@
-@import "tailwindcss";
+@reference "tailwindcss";;
 
 
 /* Curseur personnalisé */
 .custom-cursor {
-  @apply fixed z-40;
+  @apply fixed;
 
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: var(--background);
+  background: var(--foreground);
   mix-blend-mode: difference;
   pointer-events: none;
   transform-origin: left top;
   transform: scale(0.2) translate(-50%, -50%);
   transition: transform 0.2s ease-out;
+  z-index: 9998;
 
   &.moving {
     transform: scale(1) translate(-50%, -50%);
@@ -25,9 +26,9 @@
 }
 
 .cursor-inner {
-  @apply fixed z-50;
+  @apply fixed;
   pointer-events: none;
-  background: var(--background);
+  background: var(--foreground);
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -35,6 +36,7 @@
   transform-origin: left top;
   transform: scale(0) translateX(-50%) translateY(-50%);
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  z-index: 9999;
   
   &.moving{
     transform: scale(1) translateX(-50%) translateY(-50%);
