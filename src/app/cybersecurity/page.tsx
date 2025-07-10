@@ -134,7 +134,7 @@ export default function Contact() {
                             <h3>Envoi de documents sensibles</h3>
                             <p>
                                 Si vous devez transmettre un document tel qu&apos;une carte d&apos;identitée ou un justificatif de domicile,
-                                nous vous recommandons de systématiquement utiliser le service gouvernemental FiligraneFacile afin que le document ne puisse être utilisé à d'autres fins que celle indiquée dans ce dit filigrane.
+                                nous vous recommandons de systématiquement utiliser le service gouvernemental FiligraneFacile afin que le document ne puisse être utilisé à d&apos;autres fins que celle indiquée dans ce dit filigrane.
                                 <br/>
                                 <a href="https://filigrane.beta.gouv.fr/" target="_blank" rel="noopener noreferrer">
                                     Filigraner un document avec filigrane.beta.gouv.fr
