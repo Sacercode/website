@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sacercode - Conseil et Formation en Informatique",
-  description: "Sacercode, votre partenaire en conseil et formation informatique. Site web en construction.",
+  description: "Sacercode, votre partenaire en conseil et formation informatique.",
 };
 
 export default function RootLayout({
