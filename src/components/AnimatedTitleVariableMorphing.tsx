@@ -345,19 +345,16 @@ export default function AnimatedTitleVariableMorphing() {
         <div className="w-full relative flex flex-col items-center">
             {/* Container avec le filtre SVG */}
             <div 
-                className="relative w-full"
+                className="relative flex justify-center items-center w-full"
                 style={{
-                filter: 'url(#threshold) blur(0.6px)',
-                minHeight: '120px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                    filter: 'url(#threshold) blur(0.6px)',
+                    minHeight: '120px',
                 }}
             >
                 {/* Premier texte */}
                 <span
                     ref={text1Ref}
-                    className="absolute text-6xl md:text-8xl font-bold text-black dark:text-white tracking-tight select-none"
+                    className="absolute text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-black dark:text-white tracking-tight select-none"
                     style={{
                         fontFamily: `"${currentFont.name}", sans-serif`,
                         width: '100%',
@@ -375,7 +372,7 @@ export default function AnimatedTitleVariableMorphing() {
                 {/* Deuxième texte */}
                 <span
                     ref={text2Ref}
-                    className="absolute text-6xl md:text-8xl font-bold text-black dark:text-white tracking-tight select-none"
+                    className="absolute text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-black dark:text-white tracking-tight select-none"
                     style={{
                         fontFamily: `"${nextFont.name}", sans-serif`,
                         width: '100%',

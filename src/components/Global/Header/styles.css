@@ -19,16 +19,16 @@
     @apply text-lg font-bold text-gray-900 dark:text-white hover:text-blue-950 dark:hover:text-blue-100 transition-colors;
 
     &.active {
-        background: linear-gradient(to right, hsl(0, 100%, 30%), hsl(60, 100%, 30%), hsl(120, 100%, 30%), hsl(180, 100%, 30%), hsl(240, 100%, 30%), hsl(300, 100%, 30%), hsl(0, 100%, 30%), hsl(60, 100%, 30%), hsl(120, 100%, 30%), hsl(180, 100%, 30%)) 0 0 / 1000%;
+        background: linear-gradient(to right, hsl(300, 100%, 30%), hsl(0, 100%, 30%), hsl(60, 100%, 30%), hsl(120, 100%, 30%), hsl(180, 100%, 30%), hsl(240, 100%, 30%), hsl(300, 100%, 30%), hsl(0, 100%, 30%), hsl(60, 100%, 30%)) 0 0 / 1000%;
         color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
-        animation: shimmer 5s linear infinite;
+        animation: shimmer 5s linear infinite alternate;
     }
 }
 @media (prefers-color-scheme: dark) {
     .header .link.active {
-        background: linear-gradient(to right, hsl(0, 100%, 70%), hsl(60, 100%, 70%), hsl(120, 100%, 70%), hsl(180, 100%, 70%), hsl(240, 100%, 70%), hsl(300, 100%, 70%), hsl(0, 100%, 70%), hsl(60, 100%, 70%), hsl(120, 100%, 70%), hsl(180, 100%, 70%)) 0 0 / 1000%;
+        background: linear-gradient(to right, hsl(300, 100%, 70%), hsl(0, 100%, 70%), hsl(60, 100%, 70%), hsl(120, 100%, 70%), hsl(180, 100%, 70%), hsl(240, 100%, 70%), hsl(300, 100%, 70%), hsl(0, 100%, 70%), hsl(60, 100%, 70%)) 0 0 / 1000%;
         -webkit-background-clip: text;
         background-clip: text;
     }

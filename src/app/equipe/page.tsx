@@ -1,3 +1,4 @@
+import Button from "@/components/Button/Button";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,9 +35,7 @@ export default function Equipe() {
                         </a>.
                         <br/>Ou alors...
                         <Link className="block mt-6" href="/contact">
-                            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                                Contactez-moi !
-                            </button>
+                            <Button>Contactez-moi !</Button>
                         </Link>
                     </p>
                 </article>
