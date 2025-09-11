@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Equipe() {
     return (
-        <section className="flex flex-col items-center justify-center bg-white dark:bg-black text-gray-900 dark:text-white p-6">
+        <section className="flex flex-col items-center justify-center bg-white dark:bg-black text-gray-900 dark:text-white">
             <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-4">
                 <article className="mb-8">
                     <h1>L&apos;équipe</h1>

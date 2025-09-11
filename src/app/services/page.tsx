@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./styles.css";
+import Button from "@/components/Button/Button";
 
 export const metadata: Metadata = {
   title: "Services - Sacercode",
@@ -54,9 +55,7 @@ export default function Services() {
         <article className="flex flex-wrap justify-between gap-4">
           <p>Nous n&apos;offrons pas encore de services de cybersécurité. <br/>Néanmoins vous pouvez retrouver les ressources utiles sur cette page annexe.</p>
           <Link href="/cybersecurity">
-            <button className="w-full md:w-auto float-right bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Conseils cybersécurité
-            </button>
+            <Button>Conseils cybersécurité</Button>
           </Link>
         </article>
       </section>
@@ -69,6 +68,14 @@ export default function Services() {
           <p>Pour toute demande de devis ou d&apos;information complémentaire, n&apos;hésitez pas à nous contacter.</p>
           <p>Nous sommes là pour vous aider à atteindre vos objectifs informatiques.</p>
           <small>Nos tarifs sont soumis à une TVA de 20%. (article 278 du code général des impôts)</small>
+        </article>
+      </section>
+      <section className="mt-8">
+        <h3>Besoins de nos services ?</h3>
+        <article>
+          <Link href="/contact">
+            <Button>Contactez nous !</Button>
+          </Link>
         </article>
       </section>
     </div>

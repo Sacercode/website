@@ -3,7 +3,7 @@ import AnimatedTitleVariableMorphing from "@/components/AnimatedTitleVariableMor
 
 export default function Hero() {
     return (
-        <section className="flex items-center justify-center h-full w-full px-4">
+        <section className="flex items-center justify-center min-h-screen w-full px-4">
           <div className="flex flex-col items-center w-full mx-auto text-center space-y-10">
             {/* Hero Title */}
             <AnimatedTitleVariableMorphing/>

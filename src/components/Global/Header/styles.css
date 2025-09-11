@@ -1,13 +1,12 @@
 @reference "tailwindcss";
 
 .header {
-    @apply sticky top-0 left-0 flex justify-center w-full bg-white dark:bg-black z-50 
+    @apply fixed top-0 left-0 flex justify-center w-full bg-white/70 dark:bg-black/70 z-50 
         transition-all duration-300 ease-in-out h-auto
     ;
 
-    &.open {
-        @apply h-screen;
-    }
+    backdrop-filter: blur(2px);
+
 }
 
 @keyframes shimmer {
@@ -47,8 +46,7 @@
 }
 
 .header__menu {
-    @apply
-        bg-white dark:bg-black
+    @apply 
         flex flex-col md:flex-row items-center
         space-y-8 md:space-y-0 md:space-x-8
         /* absolute md:static
