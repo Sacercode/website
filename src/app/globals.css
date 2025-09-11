@@ -2,7 +2,7 @@
 
 :root {
   --white: #FEFEFE;
-  --black: #171717;
+  --black: #010101;
   --background: var(--white);
   --foreground: var(--black);
 }

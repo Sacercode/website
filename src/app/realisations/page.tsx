@@ -25,8 +25,8 @@ const discoStarImages = [
 
 export default function Realisations() {
     return (
-        <section className="flex flex-col items-center justify-center p-6">
-            <div className="max-w-3xl w-full">
+        <section className="flex flex-col items-center">
+            <div className="max-w-3xl w-full flex flex-col items-center justify-center">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Nos réalisations</h1>
                 <p className="text-lg max-w-xl text-center mb-16 mx-auto leading-relaxed">
                     Découvrez nos projets récents et comment nous avons aidé nos clients à atteindre leurs objectifs grâce à des solutions informatiques sur mesure.
@@ -50,8 +50,8 @@ export default function Realisations() {
                         </p>
                         
                         <Carousel 
-                            images={discoStarImages} 
-                            autoRotate={true} 
+                            images={discoStarImages}
+                            autoRotate={true}
                             rotationInterval={5000} 
                         />
 
