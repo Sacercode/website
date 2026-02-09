@@ -47,7 +47,8 @@ export default function ThemeSwitch() {
                     checked={theme === 'dark'}
                     onClick={
                         (e) => {
-                            const selectedTheme = e.target.checked ? 'dark' : 'light';
+                            const input = e.target as HTMLInputElement;
+                            const selectedTheme = input.checked ? 'dark' : 'light';
                             setTheme(selectedTheme);
                             localStorage.setItem('theme', selectedTheme);
                             applyTheme(selectedTheme);
