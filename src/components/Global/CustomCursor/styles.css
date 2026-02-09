@@ -47,11 +47,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .custom-cursor, .cursor-inner {
-    background: var(--foreground);
-  }
-}
 
 @keyframes cursor-pulse {
   0% {

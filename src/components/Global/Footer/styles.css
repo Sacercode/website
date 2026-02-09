@@ -1,13 +1,11 @@
-@reference "tailwindcss";;
+@reference "tailwindcss";
 
-@layer components {
-    .footer {
-        @apply dark:bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 dark:text-white
-            bg-gradient-to-b from-gray-500 via-gray-500 to-gray-200
-            text-black p-6 pb-40;
-    }
-    
-    .dark .footer {
-        @apply bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white;
-    }
+
+.footer {
+    @apply bg-linear-to-b from-sky-100/60 via-sky-100/60 to-sky-50/40 text-black p-6 pb-40;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.dark .footer {
+    @apply bg-linear-to-b from-slate-950/80 via-slate-950/80 to-slate-900/60 text-white;
 }

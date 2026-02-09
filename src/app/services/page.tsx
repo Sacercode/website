@@ -100,7 +100,7 @@ export default function Services() {
           <small>Nos tarifs sont soumis à une TVA de 20%. (article 278 du code général des impôts)</small>
         </article>
       </section>
-      <section className="flex flex-col items-center mt-32">
+      <section className="flex flex-col items-center my-32">
         <h3>Besoin de nos services ?</h3>
         <article>
           <Link href="/contact">

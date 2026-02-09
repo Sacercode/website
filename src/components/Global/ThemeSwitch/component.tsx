@@ -7,9 +7,14 @@ export default function ThemeSwitch() {
     useEffect(
         () => {
             const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-            if (savedTheme) {
-                setTheme(savedTheme);
-                applyTheme(savedTheme);
+
+            const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            const newTheme = savedTheme || (isSystemDark ? 'dark' : 'light');
+
+            if (newTheme) {
+                setTheme(newTheme);
+                applyTheme(newTheme);
             }
         }, []
     );
@@ -22,15 +27,6 @@ export default function ThemeSwitch() {
         } else if (theme === 'dark') {
             root.classList.remove('light');
             root.classList.add('dark');
-        } else {
-            const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (isSystemDark) {
-                root.classList.remove('light');
-                root.classList.add('dark');
-            } else {
-                root.classList.remove('dark');
-                root.classList.add('light');
-            }
         }
     }
 

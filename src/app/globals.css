@@ -15,13 +15,13 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--black);
     --foreground: var(--white);
   }
-}
+} */
 
 
 *, *::before, *::after {
@@ -30,13 +30,18 @@
 
 body {
   @apply min-h-screen flex flex-col justify-between;
-  background-color: var(--foreground);
-  color: var(--background);
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   cursor: none;
 }
 
 .dark body {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.light body {
   background-color: var(--background);
   color: var(--foreground);
 }
@@ -44,13 +49,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   font-weight: bold;
-  color: var(--background);
   margin-top: 2rem;
   margin-bottom: 1rem;
-}
-
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: var(--foreground);
 }
 
 body, h1, h2, h3, h4, h5, h6, p, a, button {
