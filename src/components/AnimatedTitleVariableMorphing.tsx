@@ -248,6 +248,23 @@ export default function AnimatedTitleVariableMorphing() {
             };
 
             loadFonts();
+
+            return () => {
+                // Nettoyage si nécessaire
+                document.head.querySelectorAll('link[rel="stylesheet"]').forEach(
+                    (link) => {
+                        const linkElement = link as HTMLLinkElement;
+                        variableFonts.map(
+                            font => {
+                                const fontName = font.name.replace(/\s+/g, '+');
+                                if (linkElement.href && linkElement.href.includes(fontName)) {
+                                    document.head.removeChild(linkElement);
+                                }
+                            }
+                        );
+                    }
+                );
+            };
         }, []
     );
 
@@ -432,7 +449,7 @@ export default function AnimatedTitleVariableMorphing() {
                     <div className="flex flex-col items-center">
                         <div className="w-16 h-1 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
                             <div 
-                                className={`h-full bg-gradient-to-r from-slate-200 to-slate-300 transition-all duration-300`}
+                                className={`h-full bg-linear-to-r from-slate-200 to-slate-300 transition-all duration-300`}
                                 style={{ width: `${((currentWeight - currentFont.weights[0]) / (currentFont.weights[1] - currentFont.weights[0]) * 100)}%` }}
                             />
                         </div>
@@ -463,7 +480,7 @@ export default function AnimatedTitleVariableMorphing() {
                                 <div key={axis} className="flex flex-col items-center">
                                     <div className="w-16 h-1 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
                                         <div 
-                                            className={`h-full bg-gradient-to-r ${colorClass} transition-all duration-300`}
+                                            className={`h-full bg-linear-to-r ${colorClass} transition-all duration-300`}
                                             style={{ width: `${progress}%` }}
                                         />
                                     </div>
@@ -483,7 +500,7 @@ export default function AnimatedTitleVariableMorphing() {
                     <>
                         <div className="w-full h-1 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
                             <div 
-                            className="h-full bg-gradient-to-r from-red-500 to-yellow-500 transition-all duration-100 ease-out"
+                            className="h-full bg-linear-to-r from-red-500 to-yellow-500 transition-all duration-100 ease-out"
                             style={{ 
                                 width: `${(morphState.morph / morphTime) * 100}%`,
                                 transition: 'width 0.1s ease-out'

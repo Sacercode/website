@@ -92,12 +92,8 @@ export default function MentionsLegales() {
             </h2>
             <div className="space-y-4 ">
               <p>
-                Ce site utilise des cookies pour améliorer l&apos;expérience utilisateur et analyser le trafic.
+                Ce site n'utilise pas de cookies.
                 Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez notre site.
-              </p>
-              <p>
-                Vous pouvez gérer vos préférences de cookies dans les paramètres de votre navigateur.
-                Le refus d&apos;installation d&apos;un cookie peut entraîner l&apos;impossibilité d&apos;accéder à certains services.
               </p>
             </div>
           </section>

@@ -15,7 +15,8 @@ export default function CustomCursor() {
   
   useEffect(
     () => {
-      let moveTimer: NodeJS.Timeout;
+      let moveTimer: ReturnType<typeof setTimeout>;
+
       let animationId: number;      const updateMousePosition = (e: MouseEvent) => {
         const newPosition = { x: e.clientX, y: e.clientY };
         setMousePosition(newPosition);

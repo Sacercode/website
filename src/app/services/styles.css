@@ -1,9 +1,13 @@
-@reference "tailwindcss";;
+@reference "tailwindcss";
 
 .service-icon {
-    @apply float-right h-auto 
-        min-w-20 w-20 m-2
+    @apply flex justify-center items-center h-auto float-right
+        min-w-20 w-20 ml-12 mb-4
         sm:min-w-30 sm:w-30 sm:m-12
-        md:min-w-50 md:w-50
+        md:min-w-50 md:w-50 
     ;
+}
+
+.screen {
+    @apply flex flex-col py-20;
 }

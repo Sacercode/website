@@ -165,20 +165,22 @@ export default function Contact() {
                                 <br/><br/>
 
                                 Exemples de mot de passe faible :
+                            </p>
                                 <ul>
                                     <li>NomPrénom63*</li>
                                     <li>LesCarottesSontCuittes</li>
                                     <li>Mon chat s&apos;appelle Tommy</li>
                                 </ul>
+                            <p>
                                 <br/>
                                     
                                 Exemples de mot de passe fort :
-                                <ul>
-                                    <li>L&-Kr0t.$oN_Kùït</li>
-                                    <li>fyP|lu&quot;&gt;STKJ~^NJhwm;</li>
-                                    <li>voitUr$23&gâtEau.à_1K-i/mètR</li>
-                                </ul>
                             </p>
+                            <ul>
+                                <li>L&-Kr0t.$oN_Kùït</li>
+                                <li>fyP|lu&quot;&gt;STKJ~^NJhwm;</li>
+                                <li>voitUr$23&gâtEau.à_1K-i/mètR</li>
+                            </ul>
                         </article>
                     </article>
                 </section>

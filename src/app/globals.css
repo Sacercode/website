@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --white: #FEFEFE;
   --black: #010101;
@@ -21,24 +23,38 @@
   }
 }
 
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
-  @apply min-h-screen flex flex-col justify-between bg-white dark:bg-black;
-  background: var(--background);
-  color: var(--foreground);
+  @apply min-h-screen flex flex-col justify-between;
+  background-color: var(--foreground);
+  color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   cursor: none;
+}
+
+.dark body {
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   font-weight: bold;
-  color: var(--foreground);
+  color: var(--background);
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--foreground);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, button {
+  transition: background-color 1s ease, color 1s ease;
 }
 
 h1 {
@@ -71,7 +87,11 @@ p {
 }
 
 a {
-  @apply text-blue-300 hover:underline cursor-pointer;
+  @apply text-blue-900 hover:underline cursor-pointer;
+}
+
+.dark a {
+  @apply text-blue-300;
 }
 
 button {
@@ -79,5 +99,13 @@ button {
 }
 
 .content-holder {
-  @apply grow flex flex-col items-center justify-center px-4 py-12 pt-26;
+  @apply grow flex flex-col items-center justify-center p-8;
+}
+
+.background-waves {
+  @apply fixed top-0 left-0 w-full h-full -z-10 opacity-5;
+}
+
+.background-waves img {
+  object-fit: cover;
 }

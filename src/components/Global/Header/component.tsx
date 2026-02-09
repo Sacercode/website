@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import "./styles.css";
+import ThemeSwitch from "../ThemeSwitch/component";
 
 export default function Header() {
 
@@ -54,6 +55,7 @@ export default function Header() {
           {/* <NavLink href="/logiciels">Logiciels</NavLink> */}
           <NavLink href="/equipe">L&apos;équipe</NavLink>
           <NavLink href="/contact">Contact</NavLink>
+          <ThemeSwitch />
         </div>
       </div>
     </header>

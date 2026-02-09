@@ -47,6 +47,22 @@ export default function Equipe() {
                     className="h-auto rounded-full mx-auto mb-4 border-2 border-gray-600 dark:border-gray-300 shadow-lg"
                 />
             </div>
+
+            <div className="w-full border-t border-gray-300 dark:border-gray-600 my-8">
+                <div className="max-w-4xl w-full flex flex-col items-center">
+                    <h2>Sacercode est également activateur France Numérique !</h2>
+                    <Image
+                        src="/images/france_numerique.jpg"
+                        alt="Logo France Numérique"
+                        width={300}
+                        height={300}
+                        className="h-auto mx-auto mb-4 border-2 border-gray-600 dark:border-gray-300 shadow-lg"
+                    />
+                    <Link className="block mt-6" href="https://www.francenum.gouv.fr/activateurs/sacercode" target="_blank" rel="noopener noreferrer">
+                        <Button>Voir notre profil</Button>
+                    </Link>
+                </div>
+            </div>
         </section>
     )
 }

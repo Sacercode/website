@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import CustomCursor from "@/components/Global/CustomCursor/component";
 import Header from "@/components/Global/Header/component";
 import Footer from "@/components/Global/Footer/components";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,6 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="background-waves">
+          <Image src="/images/barcode_waves_3.jpg" alt="Background waves" fill priority={true} />
+        </div>
         <CustomCursor />
         <Header />
         <main className="content-holder">

@@ -116,7 +116,7 @@ export default function Carousel3D({
                                         priority={isActive}
                                     />
                                     {/* Gradient overlay for depth effect */}
-                                    {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" /> */}
+                                    {/* <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent pointer-events-none" /> */}
                                 </div>
                             </div>
                         );
