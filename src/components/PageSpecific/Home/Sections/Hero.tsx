@@ -5,6 +5,7 @@ export default function Hero() {
     return (
         <section className="flex items-center justify-center min-h-screen w-full px-4">
           <div className="flex flex-col items-center w-full mx-auto text-center space-y-10">
+            <h1 className="hidden w-0 h-0">Sacercode informatique</h1>
             {/* Hero Title */}
             <AnimatedTitleVariableMorphing/>
             

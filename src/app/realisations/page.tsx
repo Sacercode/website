@@ -12,7 +12,7 @@ export default function Realisations() {
                 
                 <div className="mb-16">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">
+                        <h2 className="text-3xl font-bold mb-4">
                             Client confidentiel
                         </h2>
                         <p className="text-lg max-w-md mx-auto mb-6 text-gray-700 dark:text-gray-300">
@@ -24,7 +24,7 @@ export default function Realisations() {
                 {/* Disco Star Project */}
                 <div className="mb-16">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">Disco Star</h2>
+                        <h2 className="text-3xl font-bold mb-4">Disco Star</h2>
                         <p className="text-lg max-w-md mx-auto mb-6 text-gray-700 dark:text-gray-300">
                             Nous avons réalisé le site internet de ce tout premier jeu mobile inspiré par l&apos;iconique groupe Village People !
                         </p>
@@ -54,7 +54,7 @@ export default function Realisations() {
                 {/* Jouvency Project */}
                 <div className="mb-16">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">Jouvency</h2>
+                        <h2 className="text-3xl font-bold mb-4">Jouvency</h2>
                         <p className="text-lg max-w-2xl mx-auto mb-6 text-gray-700 dark:text-gray-300">
                             Ce client est une réalisation complète de A à Z, comprenant le design, le développement, ainsi que le déploiement.
                             Jouvency souhaitait un site web élégant et moderne pour présenter son activité, avec un design inspiré du luxe.
