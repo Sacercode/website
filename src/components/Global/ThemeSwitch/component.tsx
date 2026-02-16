@@ -40,7 +40,7 @@ export default function ThemeSwitch() {
                 <input
                     type="checkbox" id="theme-toggle-input"
                     className="appearance-none w-full h-full active:outline-none focus:outline-none"
-                    checked={theme === 'dark'}
+                    checked={!!(theme === 'dark')}
                     onClick={
                         (e) => {
                             const input = e.target as HTMLInputElement;
