@@ -466,9 +466,15 @@ export default function AnimatedTitleVariableMorphing() {
 
             {/* Indicateur de police et axes */}
             {isLoaded && (
-                <div className="text-center mb-4">
+                <div className="relative text-center my-4 z-20">
                     <p className="text-xs text-gray-400 dark:text-gray-500 font-mono">
-                        {morphState.isInCooldown ? currentFont.name : `${previousFont.name} → ${currentFont.name}`}
+                        {morphState.isInCooldown ? (
+                            <a href={`https://fonts.google.com/specimen/${currentFont.name}/tester`} target="_blank" rel="noopener noreferrer">
+                                {currentFont.name}
+                            </a>
+                        ) : (
+                            `${previousFont.name} → ${currentFont.name}`
+                        )}
                         <br />
                         <span className="text-xs">
                         ({morphState.currentIndex}/{randomizedFonts.length})
