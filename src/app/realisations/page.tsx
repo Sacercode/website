@@ -89,7 +89,7 @@ export default function Realisations() {
                             </div>
                         </section>
 
-                        <a className="block mt-6" href="https://discostar.game" target="_blank" rel="noopener noreferrer">
+                        <a className="block mt-6" href="https://jouvency.ch" target="_blank" rel="noopener noreferrer">
                             <Button>Visiter le site</Button>
                         </a>
                     </div>
