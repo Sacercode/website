@@ -7,7 +7,7 @@ export default function Realisations() {
             <div className="max-w-6xl w-full flex flex-col items-center justify-center">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Nos réalisations</h1>
                 <p className="text-lg max-w-xl text-center mb-16 mx-auto leading-relaxed">
-                    Découvrez nos projets récents et comment nous avons aidé nos clients à atteindre leurs objectifs grâce à des solutions informatiques sur mesure.
+                    Nous ne prenons plus de nouveaux clients mais vous pouvez découvrir nos projets passés et comment nous avons aidé nos clients à atteindre leurs objectifs grâce à des solutions informatiques sur mesure.
                 </p>
                 
                 <div className="mb-16">
@@ -56,7 +56,7 @@ export default function Realisations() {
                     <div className="text-center mb-8">
                         <h2 className="text-3xl font-bold mb-4">Jouvency</h2>
                         <p className="text-lg max-w-2xl mx-auto mb-6 text-gray-700 dark:text-gray-300">
-                            Ce client est une réalisation complète de A à Z, comprenant le design, le développement, ainsi que le déploiement.
+                            Ce projet est une réalisation complète de A à Z, comprenant le design, le développement, ainsi que le déploiement.
                             Jouvency souhaitait un site web élégant et moderne pour présenter son activité, avec un design inspiré du luxe.
                             <br/>
                             <br/>
@@ -66,10 +66,10 @@ export default function Realisations() {
                             </a>
                             <br/>
                             <br/>
-                            Après quoi nous avons développé le site en utilisant wordpress afin de permettre à notre client d'administrer son site, avec <a href="https://swiperjs.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">SwiperJS</a> pour les carrousels, et <a href="https://gsap.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">GSAP</a> pour les animations.
+                            Après quoi nous avons développé le site en utilisant WordPress afin de permettre à notre client d'administrer son site, avec <a href="https://swiperjs.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">SwiperJS</a> pour les carrousels, et <a href="https://gsap.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">GSAP</a> pour les animations.
                             <br/>
                             <br/>
-                            Suite à la livraison de leurs contenus, nous avons intégré ces éléments pour finaliser le site web tout en jouant sur la transparence pour mettre en valeur les fond vidéos.
+                            Suite à la livraison de leurs contenus, nous avons intégré ces éléments pour finaliser le site web tout en jouant sur la transparence pour mettre en valeur les fonds vidéos.
                         </p>
 
 
@@ -103,12 +103,6 @@ export default function Realisations() {
                         <a href="https://github.com/Sacercode/website" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">
                             GitHub
                         </a>
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-400">
-                        Plus de réalisations à venir... <br/>Peut-être avec vous ?
-                        <Link className="block mt-6" href="/contact">
-                            <Button>Contactez-nous !</Button>
-                        </Link>
                     </p>
                 </div>
             </div>

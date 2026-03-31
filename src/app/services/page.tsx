@@ -3,8 +3,8 @@ import { faCode } from "@fortawesome/free-solid-svg-icons/faCode";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { Metadata } from "next";
 import Link from "next/link";
-import "./styles.css";
 import Button from "@/components/Button/Button";
+import "./styles.css";
 
 export const metadata: Metadata = {
   title: "Services - Sacercode",

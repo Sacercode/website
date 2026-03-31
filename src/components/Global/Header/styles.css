@@ -33,6 +33,7 @@
         background: linear-gradient(to right, hsl(300, 100%, 70%), hsl(0, 100%, 70%), hsl(60, 100%, 70%), hsl(120, 100%, 70%), hsl(180, 100%, 70%), hsl(240, 100%, 70%), hsl(300, 100%, 70%), hsl(0, 100%, 70%), hsl(60, 100%, 70%)) 0 0 / 1000%;
         -webkit-background-clip: text;
         background-clip: text;
+        color: transparent;
     }
 }
 

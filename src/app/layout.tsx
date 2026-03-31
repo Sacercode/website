@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="background-waves">
-          <Image src="/images/barcode_waves_3.jpg" alt="Background waves" fill priority={true} />
+          <Image src="/images/barcode_waves_3.webp" alt="Background waves" fill priority={true} />
         </div>
         <CustomCursor />
         <Header />

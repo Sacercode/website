@@ -20,15 +20,15 @@ export default function Equipe() {
                         Sacercode est actuellement une armée faite d&apos;un seul homme.
                         <br />
                         <br />
-                        Je m&apos;appelle Dorian Blanchard et je suis un ingénieur informatique spécialisé dans le développement web, avec une expertise dans la création de sites web adaptés à toutes tailles d&apos;écrans.
+                        Je m&apos;appelle Dorian Blanchard et je suis un ingénieur informatique spécialisé dans le développement web, avec une expertise dans la création d'applications et de sites web adaptés à toutes tailles d&apos;écrans.
                         <br />
                         <br />
-                        En tant que client, l&apos;avantage est que vous n&apos;aurez pas à vous soucier de la communication entre les membres de l&apos;équipe, car il n&apos;y en a qu&apos;un seul !
+                        {/* En tant que client, l&apos;avantage est que vous n&apos;aurez pas à vous soucier de la communication entre les membres de l&apos;équipe, car il n&apos;y en a qu&apos;un seul !
                         <br />
                         <br />
                         Vous aurez donc un interlocuteur unique pour tous vos projets, ce qui simplifie grandement les échanges et la gestion de vos demandes.
                         <br />
-                        <br />
+                        <br /> */}
                         Pour en savoir plus sur moi, vous pouvez&nbsp;
                         <a href="https://blanchardorian.fr" target="_blank" rel="noopener noreferrer">
                             consulter mon portfolio personnel
@@ -40,7 +40,7 @@ export default function Equipe() {
                     </p>
                 </article>
                 <Image
-                    src="/images/dorian-blanchard.png"
+                    src="/images/dorian-blanchard.webp"
                     alt="Dorian Blanchard, fondateur de Sacercode"
                     width={300}
                     height={300}
@@ -50,9 +50,9 @@ export default function Equipe() {
 
             <div className="w-full border-t border-gray-300 dark:border-gray-600 my-8">
                 <div className="max-w-4xl w-full flex flex-col items-center">
-                    <h2>Sacercode est également activateur France Numérique !</h2>
+                    <h2>Sacercode est :</h2>
                     <Image
-                        src="/images/france_numerique.jpg"
+                        src="/images/france_numerique.webp"
                         alt="Logo France Numérique"
                         width={300}
                         height={300}

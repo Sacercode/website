@@ -36,7 +36,7 @@ export default function Header() {
         <div className="header__control">
           <NavLink href="/" className="flex gap-6 items-center link">
             <Image
-              src="/images/logo-sacercode.png"
+              src="/images/logo-sacercode.webp"
               alt="Logo de Sacercode"
               width={50}
               height={50}
@@ -50,9 +50,9 @@ export default function Header() {
         </div>
 
         <div className={`header__menu ${isMenuOpen ? "open" : ""}`}>
-          <NavLink href="/services">Services</NavLink>
-          <NavLink href="/realisations">Réalisations</NavLink>
+          {/* <NavLink href="/services">Services</NavLink> */}
           {/* <NavLink href="/logiciels">Logiciels</NavLink> */}
+          <NavLink href="/realisations">Réalisations</NavLink>
           <NavLink href="/equipe">L&apos;équipe</NavLink>
           <NavLink href="/contact">Contact</NavLink>
           <ThemeSwitch />

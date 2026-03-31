@@ -32,7 +32,6 @@ export default function ThemeSwitch() {
 
     return (
         <div>
-
             <div className={`relative rounded-full w-12 h-6 transition duration-200 ease-linear cursor-pointer ${theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'}`}>
                 <label htmlFor="theme-toggle-input"
                     className={`absolute ${theme === 'dark' ? 'left-6' : 'left-0'} bg-white border-2 mb-2 w-6 h-6 rounded-full transition-left duration-200 ease-linear`}>
@@ -40,7 +39,7 @@ export default function ThemeSwitch() {
                 <input
                     type="checkbox" id="theme-toggle-input"
                     className="appearance-none w-full h-full active:outline-none focus:outline-none"
-                    checked={!!(theme === 'dark')}
+                    defaultChecked={!!(theme === 'dark')}
                     onClick={
                         (e) => {
                             const input = e.target as HTMLInputElement;

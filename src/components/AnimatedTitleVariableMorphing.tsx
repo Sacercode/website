@@ -250,9 +250,9 @@ export default function AnimatedTitleVariableMorphing() {
     useEffect(
         () => {
             const loadFonts = async () => {
-                const first10Fonts = randomizedFonts.slice(0, 10);
-                const othersFonts = randomizedFonts.slice(10);
-                const fontPromises = first10Fonts.map(
+                const first3Fonts = randomizedFonts.slice(0, 3);
+                const othersFonts = randomizedFonts.slice(3);
+                const fontPromises = first3Fonts.map(
                     font => {
                         return new Promise<void>(
                             (resolve) => {
